@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Game Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎮 MINI GAME HUB</h1>
+
+<!-- MENU PRINCIPAL -->
+<div id="main-menu">
+    <button onclick="showMenu('devine')">🎯 Devine le nombre</button>
+    <button onclick="showMenu('pfc')">✊ Pierre Feuille Ciseaux</button>
+    <button onclick="showMenu('quiz')">🧠 Quiz</button>
+</div>
+
+<!-- MENU DEVINE -->
+<div id="devine" class="game-menu hidden">
+    <h2>🎯 Devine le nombre</h2>
+
+    <p id="tries">❤️ Essais : 10</p>
+
+
+    <button onclick="devineNombre()">Jouer</button>
+    <button onclick="validerDevine()">Valider</button>
+    
+    <input id="devineInput" type="text" placeholder="Tape un nombre...">
+
+    <p id="devineOutput"></p>
+
+    <button onclick="backMenu()">⬅ Retour</button>
+
+
+</div>
+
+<!-- MENU PFC -->
+<div id="pfc" class="game-menu hidden">
+    <h2>✊ Pierre Feuille Ciseaux</h2>
+
+    <button onclick="playPFC('pierre')">✊ Pierre</button>
+    <button onclick="playPFC('feuille')">✋ Feuille</button>
+    <button onclick="playPFC('ciseaux')">✌️ Ciseaux</button>
+    <p id="pfcOutput"></p>
+
+    <button onclick="backMenu()">⬅ Retour</button>
+</div>
+
+<!-- MENU QUIZ -->
+<div id="quiz" class="game-menu hidden">
+    <h2>🧠 Quiz</h2>
+
+    <button onclick="startQuiz()">Commencer</button>
+    <button onclick="validerQuiz()">Valider</button>
+
+
+    <input id="quizInput" type="text" placeholder="Réponse...">
+
+    <p id="quizOutput"></p>
+
+    <button onclick="backMenu()">⬅ Retour</button>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
