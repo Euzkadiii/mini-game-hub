@@ -1,3 +1,8 @@
+function setTheme(color) {
+    document.documentElement.style.setProperty('--main-color', color);
+}
+
+
 function logDevine(msg) {
     document.getElementById("devineOutput").innerHTML += msg + "<br>";
 }

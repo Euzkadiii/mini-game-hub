@@ -1,3 +1,7 @@
+:root { 
+    --main-color : cyan ; 
+}
+
 body {
     background: #111;
     color: white;
@@ -13,12 +17,12 @@ button {
     font-size: 16px;
     background: #222;
     color: white;
-    border: 1px solid cyan;
+    border: 1px solid var(--main-color);
     cursor: pointer;
 }
 
 button:hover {
-    background: cyan;
+    background: var(--main-color);
     color: black;
 }
 
@@ -26,9 +30,9 @@ button:hover {
     display: none;
 }
 
-h1 {
-    color: cyan;
-}
+h1 { 
+    color: var(--main-color); 
+} 
 
 h2 {
     color: orange;
