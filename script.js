@@ -1,6 +1,56 @@
+function toggleSettings() {
+    let panel = document.getElementById("settingsPanel");
+
+    if (panel.classList.contains("hidden")) {
+        panel.classList.remove("hidden");
+    } else {
+        panel.classList.add("hidden");
+    }
+}
+
 function setTheme(color) {
     document.documentElement.style.setProperty('--main-color', color);
+    localStorage.setItem('theme', color);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    let saved = localStorage.getItem("theme");
+
+    if (saved) {
+        document.documentElement.style.setProperty('--main-color', saved);
+    }
+});
+
+function saveName() {
+    let name = document.getElementById("playerName").value;
+
+    if (!name) return;
+
+    localStorage.setItem("playerName", name);
+
+    document.getElementById("welcome").innerHTML =
+        "👋 " + name;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    let name = localStorage.getItem("playerName");
+
+    if (name) {
+        document.getElementById("welcome").innerHTML =
+            "👋 " + name;
+
+        document.getElementById("playerName").value = name;
+    }
+});
+
+
+
+
+
+
+
+
+
 
 
 function logDevine(msg) {
@@ -204,3 +254,17 @@ function validerQuiz() {
 
     setTimeout(showQuestion, 300);
 }
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let saved = localStorage.getItem('theme');
+
+    if (saved) {
+        document.documentElement.style.setProperty('--main-color', saved);
+    }
+});

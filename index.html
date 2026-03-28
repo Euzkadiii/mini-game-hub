@@ -7,13 +7,44 @@
 </head>
 <body>
 
+<div id="profile">
+    <input id="playerName" placeholder="Pseudo">
+    <button onclick="saveName()">OK</button>
+    <p id="welcome"></p>
+</div>
 
-<button onclick="setTheme('cyan')">Bleu</button>
-<button onclick="setTheme('lime')">Vert</button>
-<button onclick="setTheme('orange')">Orange</button>
-<button onclick="setTheme('hotpink')">Rose</button>
 
 <h1>🎮 MINI GAME HUB</h1>
+
+
+<div id="gear" onclick="toggleSettings()">⚙️</div>
+
+<div id="settingsPanel" class="hidden">
+    <h2>🎨 Paramètres</h2>
+
+    <button onclick="setTheme('cyan')">Bleu</button>
+    <button onclick="setTheme('lime')">Vert</button>
+    <button onclick="setTheme('orange')">Orange</button>
+    <button onclick="setTheme('hotpink')">Rose</button>
+
+    <br>
+    <button onclick="toggleSettings()">❌ Fermer</button>
+</div>
+
+<div id="settingsPanel" class="hidden">
+    <h2>🎨 Paramètres</h2>
+
+    <button onclick="setTheme('cyan')">Bleu</button>
+    <button onclick="setTheme('lime')">Vert</button>
+    <button onclick="setTheme('orange')">Orange</button>
+    <button onclick="setTheme('hotpink')">Rose</button>
+
+    <br>
+    <button onclick="toggleSettings()">❌ Fermer</button>
+</div>
+
+
+
 
 <!-- MENU PRINCIPAL -->
 <div id="main-menu">
